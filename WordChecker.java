@@ -5,7 +5,13 @@ import java.util.Arrays;
 public class WordChecker {
     /** Initialized in the constructor and contains no null elements */
     public WordChecker() {}
-    private ArrayList<String> wordList = new ArrayList<String>(Arrays.asList(a.split(",")));
+    public ArrayList<String> wordList;
+
+
+    public ArrayList<String> WordChecker(String s) {
+        ArrayList<String> wordList = new ArrayList<String>();
+        wordList = s.ArrayList<(s.split(","))>();
+    }
 
     /**
      * Returns true if each element of wordList (except the first) contains the
