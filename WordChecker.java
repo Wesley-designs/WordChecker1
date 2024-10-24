@@ -5,12 +5,13 @@ import java.util.Arrays;
 public class WordChecker {
     /** Initialized in the constructor and contains no null elements */
     public WordChecker() {}
-    public ArrayList<String> wordList;
+    private ArrayList<String> wordList;
 
 
-    public ArrayList<String> WordChecker(String s) {
-        ArrayList<String> wordList = new ArrayList<String>();
-        wordList = s.ArrayList<(s.split(","))>();
+    public WordChecker(String s) {
+        wordList = new ArrayList<String>();
+        String[] list = s.split(",");
+        for(String word : list) wordList.add(word);
     }
 
     /**
@@ -22,15 +23,17 @@ public class WordChecker {
      */
     public boolean isWordChain() {
         int b = 0;
+        String a = "";
         for (String str : wordList) {
-            if (str.indexOf(str) >= 0) {
+            if (str.indexOf(a) >= 0) {
                 b++;
             } else {
                 return false;
             }
-            String a = str;
+            a = str;
         };
         if (b>0) return true;
+        return true;
         /* to be implemented in part (a) */ }
 
     /**
@@ -55,4 +58,9 @@ public class WordChecker {
         }
         return list;
         /* to be implemented in part (b) */ }
+
+    public String toString()
+    {
+        return wordList.toString();
+    }
 }
