@@ -52,7 +52,9 @@ public class WordChecker {
         ArrayList<String> list = new ArrayList<>();
         int a = target.length();
         for (String str : wordList) {
-            if (str.substring(0,a).equals(target)) {
+            if (str.length()<a) {
+                break;
+            } else if (str.substring(0,a).equals(target)) {
                 list.add(str.replace(target, ""));
             }
         }

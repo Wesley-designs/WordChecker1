@@ -7,6 +7,9 @@ public class Main {
         System.out.println(a.isWordChain());
         WordChecker b = new WordChecker("to,too,stool,tools");
         System.out.println(b.isWordChain());
-        WordChecker c = new WordChecker("to,too,stool,tools");
+        WordChecker c = new WordChecker("catch,bobcat,catchacat,cat,at");
+        System.out.println(c.createList("cat"));
+        System.out.println(c.createList("catch"));
+        System.out.println(c.createList("dog"));
     }
 }   
